@@ -9,7 +9,7 @@ const labelMap = {
     7:{name:'g', color:'white'},
     8:{name:'h', color:'teal'},
     9:{name:'i', color:'brown'},
-    10:{name:'j', color:'black'},
+    10:{name:'j', color:'maroon'},
 }
 
 // Define a drawing function
