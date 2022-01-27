@@ -20,6 +20,7 @@ const Home = () => {
     );
 
     //  Loop and detect hands
+    // A function to be executed every delay milliseconds. The first execution happens after delay milliseconds. 16.7
     setInterval(() => {
       detect(net);
     }, 16.7);
