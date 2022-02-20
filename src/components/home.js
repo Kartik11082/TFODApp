@@ -4,7 +4,8 @@ import * as tf from "@tensorflow/tfjs";
 // e.g. import * as tfmodel from "@tensorflow-models/tfmodel";
 import Webcam from "react-webcam";
 // 2. TODO - Import drawing utility here
-import { drawRect } from "../utilities";
+import { drawRect, BackSpace, Space, Clear } from "../utilities";
+// import { button } from
 
 const Home = () => {
   const webcamRef = useRef(null);
@@ -111,6 +112,45 @@ const Home = () => {
           }}
         />
 
+        <button
+          onClick={Space}
+          style={{
+            position: "absolute",
+            top: "485px",
+            left: 120,
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
+        >
+          Space
+        </button>
+
+        <button
+          onClick={BackSpace}
+          style={{
+            position: "absolute",
+            top: "515px",
+            left: 120,
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
+        >
+          BackSpace
+        </button>
+
+        <button
+          onClick={Clear}
+          style={{
+            position: "absolute",
+            top: "545px",
+            left: 120,
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
+        >
+          Clear
+        </button>
+
         <canvas
           ref={canvasRef}
           style={{
@@ -126,6 +166,7 @@ const Home = () => {
             borderRadius: 7,
           }}
         />
+
         <p
           id="p1"
           style={{
@@ -140,7 +181,6 @@ const Home = () => {
             borderRadius: 5,
           }}
         ></p>
-        {/* </div> */}
       </header>
     </div>
   );
