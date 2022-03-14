@@ -4,7 +4,7 @@ import * as tf from "@tensorflow/tfjs";
 // e.g. import * as tfmodel from "@tensorflow-models/tfmodel";
 import Webcam from "react-webcam";
 // 2. TODO - Import drawing utility here
-import { drawRect, BackSpace, Space, Clear } from "../utilities";
+import { drawRect, AddPreChar, BackSpace, Space, Clear } from "../utilities";
 // import { button } from
 
 const Home = () => {
@@ -111,6 +111,19 @@ const Home = () => {
             borderRadius: 7,
           }}
         />
+
+        <button
+          onClick={AddPreChar}
+          style={{
+            position: "absolute",
+            top: "455px",
+            left: 120,
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
+        >
+          Repeat
+        </button>
 
         <button
           onClick={Space}
