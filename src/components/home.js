@@ -6,6 +6,7 @@ import Webcam from "react-webcam";
 // 2. TODO - Import drawing utility here
 import { drawRect, AddPreChar, BackSpace, Space, Clear } from "../utilities";
 // import { button } from
+import "./home.css";
 
 const Home = () => {
   const webcamRef = useRef(null);
@@ -114,9 +115,10 @@ const Home = () => {
 
         <button
           onClick={AddPreChar}
+          className="button-84"
           style={{
             position: "absolute",
-            top: "455px",
+            top: "150px",
             left: 120,
             marginLeft: "auto",
             marginRight: "auto",
@@ -127,9 +129,10 @@ const Home = () => {
 
         <button
           onClick={Space}
+          className="button-84"
           style={{
             position: "absolute",
-            top: "485px",
+            top: "250px",
             left: 120,
             marginLeft: "auto",
             marginRight: "auto",
@@ -140,9 +143,10 @@ const Home = () => {
 
         <button
           onClick={BackSpace}
+          className="button-84"
           style={{
             position: "absolute",
-            top: "515px",
+            top: "350px",
             left: 120,
             marginLeft: "auto",
             marginRight: "auto",
@@ -153,9 +157,10 @@ const Home = () => {
 
         <button
           onClick={Clear}
+          className="button-84"
           style={{
             position: "absolute",
-            top: "545px",
+            top: "450px",
             left: 120,
             marginLeft: "auto",
             marginRight: "auto",
