@@ -55,18 +55,21 @@ export const drawRect = (
       guesstext = labelMap[text]["name"];
       console.log(guesstext);
 
-      if (guesstext === "k") {
-        window.open(
-          "https://leetcode.com/problemset/all/?difficulty=EASY&page=1%22"
-        );
-      } else {
-        // Queue Logic
+      if (
+        guesstext !==
+        document
+          .getElementById("p1")
+          .innerHTML.charAt(document.getElementById("p1").innerHTML.length - 1)
+      ) {
         let recognizedStrings;
         recognizedStrings = document.getElementById("p1").innerHTML + guesstext;
         // console.log("Document Get element: ", document.getElementById("p1").innerHTML)
 
         document.getElementById("p1").innerHTML =
           outputQueue(recognizedStrings);
+        if (guesstext === "j") {
+          window.open("https://www.dailymoth.com/blog?category=TOP%20STORIES");
+        }
       }
     }
   }
@@ -82,8 +85,13 @@ const outputQueue = (recognizedStrings) => {
   return recognizedStrings;
 };
 
+export const AddPreChar = () => {
+  let x = document.getElementById("p1").innerHTML;
+  x = x + x.charAt(x.length - 1);
+  document.getElementById("p1").innerHTML = outputQueue(x);
+};
+
 export const BackSpace = () => {
-  //   document.getElementById("p1").innerHTML = outputQueue(recognizedStrings);
   document.getElementById("p1").innerHTML = document
     .getElementById("p1")
     .innerHTML.slice(0, -1);
