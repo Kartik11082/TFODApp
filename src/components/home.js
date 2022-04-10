@@ -91,11 +91,18 @@ const Home = () => {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <div
-		  style={{
-			background: "#333843",
-		  }}
-		> */}
+        <h1
+          style={{
+            position: "absolute",
+            top: "15px",
+            marginLeft: "auto",
+            marginRight: "auto",
+            textAlign: "center",
+          }}
+        >
+          Hand Sign Recognition System
+        </h1>
+
         <Webcam
           ref={webcamRef}
           muted={true}
@@ -189,14 +196,15 @@ const Home = () => {
           id="p1"
           style={{
             position: "relative",
-            top: "265px",
+            top: "270px",
             marginLeft: "auto",
             marginRight: "auto",
             width: 640,
             height: 40,
-            background: "#121517",
+            // background: "#121517",
+            backgroundImage: `linear-gradient(#282828, #141414)`,
             // zindex: 10,
-            borderRadius: 5,
+            borderRadius: 7,
           }}
         ></p>
       </header>
