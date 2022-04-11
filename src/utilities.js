@@ -56,9 +56,43 @@ export const drawRect = (
       ctx.stroke();
 
       guesstext = labelMap[text]["name"];
-      console.log(guesstext);
+      // console.log(guesstext);
 
-      if (
+      if (guesstext === "good") {
+        let delement = document.getElementById("p1").innerHTML;
+        if (
+          delement.substring(delement.length, delement.length - 4) !== "good"
+        ) {
+          delement = document.getElementById("p1").innerHTML + " " + guesstext;
+          document.getElementById("p1").innerHTML = outputQueue(delement);
+          if (document.getElementById("p1").innerHTML.length > 20) {
+            document.getElementById("p1").innerHTML = delement.slice(4);
+          }
+        }
+      } else if (guesstext === "morning") {
+        let delement = document.getElementById("p1").innerHTML;
+        if (
+          delement.substring(delement.length, delement.length - 7) !== "morning"
+        ) {
+          delement = document.getElementById("p1").innerHTML + " " + guesstext;
+          document.getElementById("p1").innerHTML = outputQueue(delement);
+          if (document.getElementById("p1").innerHTML.length > 20) {
+            document.getElementById("p1").innerHTML = delement.slice(7);
+          }
+        }
+      } else if (guesstext === "misc") {
+        let delement = document.getElementById("p1").innerHTML;
+        if (
+          delement.substring(delement.length, delement.length - 4) !== "misc"
+        ) {
+          delement = document.getElementById("p1").innerHTML + " " + guesstext;
+          document.getElementById("p1").innerHTML = outputQueue(delement);
+          if (document.getElementById("p1").innerHTML.length > 20) {
+            document.getElementById("p1").innerHTML = delement.slice(4);
+          }
+          window.open("https://www.dailymoth.com/blog?category=TOP%20STORIES");
+        }
+      } else if (
         guesstext !==
         document
           .getElementById("p1")
@@ -70,9 +104,6 @@ export const drawRect = (
 
         document.getElementById("p1").innerHTML =
           outputQueue(recognizedStrings);
-        if (guesstext === "misc") {
-          window.open("https://www.dailymoth.com/blog?category=TOP%20STORIES");
-        }
       }
     }
   }
