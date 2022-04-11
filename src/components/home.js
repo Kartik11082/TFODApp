@@ -17,8 +17,11 @@ const Home = () => {
     // 3. TODO - Load network
     // e.g. const net = await cocossd.load();
     //https://hsrmodel.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json
+    // const net = await tf.loadGraphModel(
+    //   "https://hsrmodel.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json"
+    // );
     const net = await tf.loadGraphModel(
-      "https://hsrmodel.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json"
+      "https://hsrmodelv2.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json"
     );
 
     //  Loop and detect hands
@@ -56,10 +59,10 @@ const Home = () => {
       const obj = await net.executeAsync(expanded);
 
       const boxes = await obj[2].array();
-      const classes = await obj[1].array();
-      const scores = await obj[3].array();
+      const classes = await obj[3].array();
+      const scores = await obj[4].array();
       const guesstext = null;
-
+      // console.log(scores);
       // Draw mesh
       const ctx = canvasRef.current.getContext("2d");
 

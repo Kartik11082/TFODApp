@@ -10,6 +10,9 @@ const labelMap = {
   8: { name: "h", color: "teal" },
   9: { name: "i", color: "brown" },
   10: { name: "j", color: "black" },
+  11: { name: "good", color: "black" },
+  12: { name: "morning", color: "black" },
+  13: { name: "misc", color: "black" },
 };
 
 // Define a drawing function
@@ -67,7 +70,7 @@ export const drawRect = (
 
         document.getElementById("p1").innerHTML =
           outputQueue(recognizedStrings);
-        if (guesstext === "j") {
+        if (guesstext === "misc") {
           window.open("https://www.dailymoth.com/blog?category=TOP%20STORIES");
         }
       }
